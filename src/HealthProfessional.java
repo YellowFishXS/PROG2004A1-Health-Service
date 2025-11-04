@@ -49,6 +49,10 @@ public class HealthProfessional {
         return name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     //manipulate the properties
     public boolean setId(int id) {
         //perform input validation
@@ -72,4 +76,14 @@ public class HealthProfessional {
         return true;
     }
 
+    public boolean setAge(int age) {
+        //perform input validation
+        if (age>0){
+            this.age = age;
+        }else {
+            System.out.println("input invalidation");
+            return false;
+        }
+        return true;
+    }
 }

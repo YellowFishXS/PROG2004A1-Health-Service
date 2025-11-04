@@ -4,23 +4,41 @@
 public class HealthProfessional {
     private int id;
     private String name;
+    private int age;
 
+
+    //default constructor
     public HealthProfessional() {
         this.id = 0;
         this.name = "";
+        this.age = 30;
         System.out.println("create HealthProfessional");
     }
 
     /**
-     *  Constructor for objects of class HealthProfessional
+     * Second Constructor for initialises all the instance variables.
      * @param id
      * @param name
+     * @param age
      */
-    public HealthProfessional(int id, String name) {
+    public HealthProfessional(int id, String name, int age) {
         this.id = id;
         this.name = name;
+        this.age = age;
         System.out.println("Constructor--HealthProfessional: " + name + " (ID: " + id + ")");
     }
+
+    /**
+     * prints all instance variables.
+     */
+    public void printHealthProfessional(){
+        System.out.println("=== HealthProfessional===");
+        System.out.println("ID: " + this.id);
+        System.out.println("Name: " + this.name);
+        System.out.println("Age: " + this.age);
+        System.out.println("==========================");
+    }
+
 
     //access the properties
     public int getId() {

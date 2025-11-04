@@ -6,5 +6,8 @@ public class AssignmentOne {
 
         GeneralPractitioner g1 = new GeneralPractitioner();
         g1.printHealthProfessional();
+
+        Cardiologist c1 = new Cardiologist(123,"abc",35,"bbb");
+        c1.printHealthProfessional();
     }
 }

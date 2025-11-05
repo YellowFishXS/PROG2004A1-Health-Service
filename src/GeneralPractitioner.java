@@ -28,7 +28,7 @@ public class GeneralPractitioner extends HealthProfessional {
      */
     @Override
     public void printHealthProfessional() {
-        System.out.println("=== General Practitioner Detailed information===");
+        System.out.println("=== The health professional details are:===");
         System.out.println("ID: " + getId());
         System.out.println("Name: " + getName());
         System.out.println("Age: " + getAge());

@@ -30,7 +30,7 @@ public class Cardiologist extends HealthProfessional {
      */
     @Override
     public void printHealthProfessional() {
-        System.out.println("=== Cardiologist Detailed information===");
+        System.out.println("=== The health professional details are:===");
         System.out.println("ID: " + getId());
         System.out.println("Name: " + getName());
         System.out.println("Age: " + getAge());

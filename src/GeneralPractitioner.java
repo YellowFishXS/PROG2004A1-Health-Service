@@ -13,14 +13,14 @@ public class GeneralPractitioner extends HealthProfessional {
     public GeneralPractitioner() {
         super();
         this.isGeneralPractitioner = true;
-        System.out.println("A default general practitioner object has been created");
+//        System.out.println("A default general practitioner object has been created");
     }
 
     public GeneralPractitioner(int id, String name, int Age, boolean isGeneralPractitioner){
         // Call the constructor of the base class
         super(id, name, Age);
         this.isGeneralPractitioner = isGeneralPractitioner;
-        System.out.println("created GeneralPractitioner name: " + name);
+//        System.out.println("created GeneralPractitioner name: " + name);
     }
 
     /**

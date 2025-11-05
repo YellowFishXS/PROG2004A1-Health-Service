@@ -12,7 +12,7 @@ public class HealthProfessional {
         this.id = 0;
         this.name = "";
         this.age = 30;
-        System.out.println("create HealthProfessional");
+//        System.out.println("create HealthProfessional");
     }
 
     /**
@@ -25,7 +25,7 @@ public class HealthProfessional {
         this.id = id;
         this.name = name;
         this.age = age;
-        System.out.println("Constructor--HealthProfessional: " + name + " (ID: " + id + ")");
+//        System.out.println("Constructor--HealthProfessional: " + name + " (ID: " + id + ")");
     }
 
     /**

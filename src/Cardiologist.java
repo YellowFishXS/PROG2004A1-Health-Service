@@ -13,7 +13,6 @@ public class Cardiologist extends HealthProfessional {
     public Cardiologist() {
         super();
         this.cardiacSpecialty = "Cardiovascular Surgeon";
-        System.out.println("A default Cardiologist object has been created");
     }
 
     // A second constructor that initialises all the instance variables
@@ -21,7 +20,7 @@ public class Cardiologist extends HealthProfessional {
         // Call the constructor of the base class
         super(id, name, Age);
         this.cardiacSpecialty = cardiacSpecialty;
-        System.out.println("created Cardiologist name: " + name);
+//        System.out.println("created Cardiologist name: " + name);
     }
 
 

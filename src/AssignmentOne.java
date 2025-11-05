@@ -9,29 +9,33 @@ public class AssignmentOne {
 //
 //        Cardiologist c1 = new Cardiologist(123,"abc",35,"bbb");
 //        c1.printHealthProfessional();
+        // Part 3 - Using classes and objects
+        System.out.println("// Part 3 - Using classes and objects");
 
+        // create three objects of General Practitioners
+        System.out.println("create three objects of General Practitioners:");
+        GeneralPractitioner gp1 = new GeneralPractitioner(001, "Dr.Li", 45, true);
+        GeneralPractitioner gp2 = new GeneralPractitioner(002, "Dr.Wang", 46, false);
+        GeneralPractitioner gp3 = new GeneralPractitioner(003, "Dr.Zhang", 47, true);
 
-        System.out.println("=== The health professional details are: ===");
+        // two objects of the other health professional type.
+        System.out.println("two objects of the Cardiologist:");
+        Cardiologist cardio1 = new Cardiologist(004, "Dr.Wa", 53, "pediatric cardiologist");
+        Cardiologist cardio2 = new Cardiologist(005, "Dr.Hua", 53, "cardiovascular surgeon");
 
-        // 测试全科医生
-        System.out.println("GeneralPractitioner:");
-        GeneralPractitioner gp1 = new GeneralPractitioner(); // 默认构造函数
+        // print the details of all the health professionals
+        System.out.println(" print the details of all the health professionals:");
+        System.out.println("=== GeneralPractitioner ===");
         gp1.printHealthProfessional();
-
-        System.out.println(); // 空行
-
-        GeneralPractitioner gp2 = new GeneralPractitioner(01, "Dr.Zhang", 45, true);
         gp2.printHealthProfessional();
+        gp3.printHealthProfessional();
 
-        System.out.println("Cardiologist:");
-        Cardiologist cardio1 = new Cardiologist(); // 默认构造函数
+        System.out.println("\n=== Cardiologist ===");
         cardio1.printHealthProfessional();
-
-        System.out.println(); // 空行
-
-        Cardiologist cardio2 = new Cardiologist(002, "Dr.Li", 46, "Cardiology Department");
         cardio2.printHealthProfessional();
 
+        // 添加分隔符
+        System.out.println("-------------------------------------------------");
 
     }
 }

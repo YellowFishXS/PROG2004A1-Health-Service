@@ -32,11 +32,10 @@ public class HealthProfessional {
      * prints all instance variables.
      */
     public void printHealthProfessional(){
-        System.out.println("=== HealthProfessional===");
+        System.out.println("HealthProfessional");
         System.out.println("ID: " + this.id);
         System.out.println("Name: " + this.name);
         System.out.println("Age: " + this.age);
-        System.out.println("==========================");
     }
 
 

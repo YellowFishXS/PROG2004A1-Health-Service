@@ -13,25 +13,26 @@ public class AssignmentOne {
         System.out.println("// Part 3 - Using classes and objects");
 
         // create three objects of General Practitioners
-        System.out.println("create three objects of General Practitioners:");
         GeneralPractitioner gp1 = new GeneralPractitioner(001, "Dr.Li", 45, true);
         GeneralPractitioner gp2 = new GeneralPractitioner(002, "Dr.Wang", 46, false);
         GeneralPractitioner gp3 = new GeneralPractitioner(003, "Dr.Zhang", 47, true);
 
         // two objects of the other health professional type.
-        System.out.println("two objects of the Cardiologist:");
         Cardiologist cardio1 = new Cardiologist(004, "Dr.Wa", 53, "pediatric cardiologist");
         Cardiologist cardio2 = new Cardiologist(005, "Dr.Hua", 53, "cardiovascular surgeon");
 
         // print the details of all the health professionals
-        System.out.println(" print the details of all the health professionals:");
-        System.out.println("=== GeneralPractitioner ===");
+        System.out.println("========= GeneralPractitioner =========");
         gp1.printHealthProfessional();
+        System.out.println();
         gp2.printHealthProfessional();
+        System.out.println();
         gp3.printHealthProfessional();
+        System.out.println();
 
-        System.out.println("\n=== Cardiologist ===");
+        System.out.println("============ Cardiologist ============");
         cardio1.printHealthProfessional();
+        System.out.println();
         cardio2.printHealthProfessional();
 
         // 添加分隔符

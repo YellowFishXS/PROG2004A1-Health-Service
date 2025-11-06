@@ -35,8 +35,16 @@ public class AssignmentOne {
         System.out.println();
         cardio2.printHealthProfessional();
 
-        // 添加分隔符
         System.out.println("-------------------------------------------------");
+
+
+//       Part4 Appointment
+        //split
+        System.out.println();
+        System.out.println("------------Part 4------------");
+        Appointment ap1 = new Appointment("zhang", "123456","10:00",gp1);
+        ap1.printDetail();
+
 
     }
 }

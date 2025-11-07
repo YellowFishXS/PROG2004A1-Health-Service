@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class AssignmentOne {
     public static void main(String[] args) {
 //        HealthProfessional h1 = new HealthProfessional(123,"abc",35);
@@ -46,5 +48,15 @@ public class AssignmentOne {
         ap1.printDetail();
 
 
+        // Part 5 – Collection of appointments
+        ArrayList<Appointment> appointments = new ArrayList<>();
+        System.out.println("------------Part 5------------");
+
+
+
+
     }
+
+
+    
 }

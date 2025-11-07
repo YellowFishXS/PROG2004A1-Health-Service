@@ -49,8 +49,10 @@ public class AssignmentOne {
 
 
         // Part 5 – Collection of appointments
-        ArrayList<Appointment> appointments = new ArrayList<>();
         System.out.println("------------Part 5------------");
+
+        ArrayList<Appointment> appointments = new ArrayList<>();
+        createAppointment();
 
 
 
@@ -58,5 +60,20 @@ public class AssignmentOne {
     }
 
 
-    
+    public static void createAppointment(ArrayList<Appointment> appointments,String name, String phone, String time, HealthProfessional doctor){
+
+        if (name == null || name.trim().isEmpty() ||
+                phone == null || phone.trim().isEmpty() ||
+                time == null || time.trim().isEmpty() ||
+                doctor == null) {
+            System.out.println("Error: Appointment creation failed. Necessary information is missing.");
+            return;
+        }
+
+        // Create a new appointment object and add it to the collection
+        Appointment newAppointment = new Appointment(name, phone, time, doctor);
+        appointments.add(newAppointment);
+        System.out.println("The appointment has been successfully created. " +name+","+phone+","+time);
+
+    }
 }

@@ -24,5 +24,35 @@ public class Appointment {
         this.selectedDoctor.printHealthProfessional();
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
+
+    public String getPreferredTime() {
+        return preferredTime;
+    }
+
+    public void setPreferredTime(String preferredTime) {
+        this.preferredTime = preferredTime;
+    }
+
+    public HealthProfessional getSelectedDoctor() {
+        return selectedDoctor;
+    }
+
+    public void setSelectedDoctor(HealthProfessional selectedDoctor) {
+        this.selectedDoctor = selectedDoctor;
+    }
 }

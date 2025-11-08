@@ -20,7 +20,7 @@ public class Appointment {
         System.out.println("The appointment details are:");
         System.out.println("Name: " + this.name);
         System.out.println("Phone Number: " + this.mobilePhone);
-        System.out.println("===========Doctor Detail==========");
+        System.out.println("Doctor Detail:");
         this.selectedDoctor.printHealthProfessional();
     }
 

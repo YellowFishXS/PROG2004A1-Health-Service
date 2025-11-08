@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 
 public class AssignmentOne {
+
+    private static ArrayList<Appointment> appointments = new ArrayList<>();
     public static void main(String[] args) {
 //        HealthProfessional h1 = new HealthProfessional(123,"abc",35);
 //        System.out.println(h1.toString());
@@ -11,6 +13,7 @@ public class AssignmentOne {
 //
 //        Cardiologist c1 = new Cardiologist(123,"abc",35,"bbb");
 //        c1.printHealthProfessional();
+
         // Part 3 - Using classes and objects
         System.out.println("// Part 3 - Using classes and objects");
 
@@ -46,21 +49,35 @@ public class AssignmentOne {
         System.out.println("------------Part 4------------");
         Appointment ap1 = new Appointment("zhang", "123456","10:00",gp1);
         ap1.printDetail();
+        System.out.println(); //split
 
 
         // Part 5 – Collection of appointments
         System.out.println("------------Part 5------------");
+        //General Practitioner
+        createAppointment("Lily", "12345678999", "09:00", gp1);
+        createAppointment("Anddy", "12345678910", "10:00", gp2);
 
-        ArrayList<Appointment> appointments = new ArrayList<>();
-        createAppointment();
+        //Cardiologist
+        createAppointment("Jack", "12345678987", "11:00", cardio1);
+        createAppointment("Macke", "12345678901", "12:00", cardio2);
 
+        System.out.println("\nPrint existing appointments:");
+        printExistingAppointments();
 
+        System.out.println("\nCancel booking");
+        cancelBooking("12345678999");
+
+        System.out.println("\nPrint existing appointments:");
+        printExistingAppointments();
+
+        System.out.println("-------------------------------------------------");
 
 
     }
 
 
-    public static void createAppointment(ArrayList<Appointment> appointments,String name, String phone, String time, HealthProfessional doctor){
+    public static void createAppointment(String name, String phone, String time, HealthProfessional doctor){
 
         if (name == null || name.trim().isEmpty() ||
                 phone == null || phone.trim().isEmpty() ||
@@ -74,6 +91,40 @@ public class AssignmentOne {
         Appointment newAppointment = new Appointment(name, phone, time, doctor);
         appointments.add(newAppointment);
         System.out.println("The appointment has been successfully created. " +name+","+phone+","+time);
-
     }
+
+    public static void printExistingAppointments() {
+        if (appointments.isEmpty()) {
+            System.out.println("There are no appointments");
+            return;
+        }
+
+        System.out.println("The number of appointments: " + appointments.size());
+        for (int i = 0; i < appointments.size(); i++) {
+            System.out.println("NO." + (i + 1) + ":");
+            appointments.get(i).printDetail(); // Call the print method of the Appointment class
+            System.out.println("========================");
+        }
+    }
+
+    public static void cancelBooking(String mobile) {
+        if (mobile == null || mobile.trim().isEmpty()) {
+            System.out.println("Error: Invalid mobile phone number.");
+            return;
+        }
+
+        // find appointment
+        for (int i = 0; i < appointments.size(); i++) {
+            Appointment appointment = appointments.get(i);
+            if (mobile.equals(appointment.getMobilePhone())) {
+                appointments.remove(i);
+                System.out.println("Cancel successfully！");
+                return;
+            }
+        }
+
+        // no match phone number
+        System.out.println("Error: The mobile phone number was not found " + mobile);
+    }
+
 }
